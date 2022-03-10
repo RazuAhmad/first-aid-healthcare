@@ -1,0 +1,23 @@
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: bisque;
+  padding: 10px;
+}
+
+.navLogo img {
+  width: 80px;
+}
+
+.navLink {
+  display: flex;
+  list-style: none;
+}
+
+.navbar li:hover {
+  background: greenyellow;
+}
+
+.navLink li {
+  margin-right: 55px;
+}
