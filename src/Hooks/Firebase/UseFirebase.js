@@ -17,20 +17,18 @@ const UseFirebase = () => {
 
   const [newUser, setNewUser] = useState({});
   const [errorMsg, setErrorMsg] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
   // const [userName, setUserName] = useState("");
   const signInWithGoogle = () => {
-    signInWithPopup(auth, googleProvider)
-      .then((result) => {
-        const user = result.user;
-
-        setNewUser(user);
-        console.log(user);
-      })
-
-      .catch((error) => {
-        const errorMessage = error.message;
-        setErrorMsg(errorMessage);
-      });
+    return (
+      signInWithPopup(auth, googleProvider)
+        // setNewUser(user);
+        .catch((error) => {
+          const errorMessage = error.message;
+          setErrorMsg(errorMessage);
+        })
+        .finally(() => setIsLoading(false))
+    );
   };
 
   // New user name
@@ -72,19 +70,23 @@ const UseFirebase = () => {
   };
 
   const logOut = () => {
+    setIsLoading(true);
     signOut(auth)
       .then(() => {
         setNewUser("");
       })
       .catch((error) => {
         setErrorMsg(error);
-      });
+      })
+
+      .finally(() => setIsLoading(false));
   };
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         setNewUser(user);
+        setIsLoading(false);
       } else {
         setNewUser("");
       }
@@ -98,6 +100,7 @@ const UseFirebase = () => {
     signInWithEmailPass,
     createNewUserWithEmailAndPass,
     logOut,
+    isLoading,
   };
 };
 

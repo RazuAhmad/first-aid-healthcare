@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./SignIn.css";
-import { Button, Form } from "react-bootstrap";
+import { Button, Form, Spinner } from "react-bootstrap";
 import UseAuth from "../../Hooks/UseAuth";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const SignIn = () => {
   const [userName, setUserName] = useState("");
@@ -38,8 +39,14 @@ const SignIn = () => {
   //   });
   // };
 
+  const history = useNavigate();
+  const location = useLocation();
+  const redirect_url = location.state?.from || "/";
   const handleSignInWithGoogle = () => {
-    signInWithGoogle();
+    signInWithGoogle().then((result) => {
+      // const user = result.user;
+      history(redirect_url);
+    });
   };
 
   const handleForm = (e) => {

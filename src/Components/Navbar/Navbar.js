@@ -2,7 +2,9 @@ import React from "react";
 import "./Navbar.css";
 import logo from "./logo.png";
 import { Link } from "react-router-dom";
+import UseAuth from "../../Hooks/UseAuth";
 const Navbar = () => {
+  const { newUser } = UseAuth();
   return (
     <div className="navbar">
       <div className="navLogo">
@@ -38,6 +40,11 @@ const Navbar = () => {
               Appointment
             </Link>
           </li>
+          {/* {newUser?.email && (
+            <Link style={{ textDecoration: "none" }}>
+              logged In as {newUser?.displayName}
+            </Link>
+          )} */}
         </ul>
       </div>
     </div>
