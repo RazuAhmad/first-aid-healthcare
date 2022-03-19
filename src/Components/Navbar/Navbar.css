@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-evenly;
   background-color: bisque;
+  background-size: auto;
   padding: 10px;
 }
 
@@ -20,4 +21,14 @@
 
 .navLink li {
   margin-right: 55px;
+}
+
+@media only screen and (max-width: 668px) {
+  .navbar {
+    justify-content: space-between;
+    background-size: auto;
+  }
+  .navLink li {
+    margin-right: 10px;
+  }
 }

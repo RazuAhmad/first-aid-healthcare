@@ -1,0 +1,19 @@
+.singleService {
+  /* width: 500px; */
+  height: 540px;
+  box-shadow: 3px 4px 5px gray;
+  border-radius: 29px;
+  text-align: center;
+  background-color: antiquewhite;
+  background-size: contain;
+}
+
+.singleService img {
+  text-align: center;
+  margin-top: 10px;
+  border-radius: 29px;
+}
+
+.singleService:hover {
+  opacity: 0.5;
+}

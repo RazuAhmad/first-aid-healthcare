@@ -1,0 +1,56 @@
+[
+  {
+    "id": "1",
+    "serviceName": "Cardiology Clinic",
+    "pricing": "$8.35",
+    "serviceImg": "https://i.ibb.co/WBk4MsL/pexels-pixabay-263337.jpg"
+  },
+  {
+    "id": "2",
+    "serviceName": "Group Therapy",
+    "pricing": "$1.83",
+    "serviceImg": "https://i.ibb.co/zs3wHb8/group-therapy.webp"
+  },
+  {
+    "id": "3",
+    "serviceName": "Child Therapy",
+    "pricing": "$7.24",
+    "serviceImg": "https://i.ibb.co/z5CjSMb/child-therapy.webp"
+  },
+  {
+    "id": "4",
+    "serviceName": "Stress at Work",
+    "pricing": "$1.66",
+    "serviceImg": "https://i.ibb.co/JHRbPCf/strees-at-work.jpg"
+  },
+  {
+    "id": "5",
+    "serviceName": "Blood Pressure",
+    "pricing": "$1.38",
+    "serviceImg": "https://i.ibb.co/9V6nywj/blood-pressure.webp"
+  },
+  {
+    "id": "6",
+    "serviceName": "Individual Coaching",
+    "pricing": "$7.64",
+    "serviceImg": "https://i.ibb.co/k84RtFF/individual-coaching.jpg"
+  },
+  {
+    "id": "7",
+    "serviceName": "Anxiety Disorder",
+    "pricing": "$2.39",
+    "serviceImg": "https://i.ibb.co/XVt0dnR/anxiety-disorder.webp"
+  },
+  {
+    "id": "8",
+    "serviceName": "Chronic Pain",
+    "pricing": "$1.46",
+    "serviceImg": "https://i.ibb.co/Yd34YRM/chronic-pain.jpg"
+  },
+  {
+    "id": "9",
+    "serviceName": "Marital Therapy",
+    "pricing": "$1.74",
+    "serviceImg": "https://i.ibb.co/D7X2BW0/marital-therapy.webp"
+  }
+]
